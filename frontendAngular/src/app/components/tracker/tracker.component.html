@@ -1,0 +1,35 @@
+<div class = "container-fluid">
+  <h2 style="text-align: center;"> Traking del Mezzo : {{ targa }}</h2>
+  <div class="row">
+    <div id="map"></div>
+  </div>
+<div class="row m-3">
+    <div class="col">
+        <button (click)="startTraking()" class="btn btn-success">Start Traking</button>
+    </div>
+    <div class="col">
+        <button (click)="stopTraking()" class="btn btn-warning">Stop Traking</button>
+    </div>
+  </div>
+ 
+  <div class="row m-3">
+    <div class="col">
+        <span *ngIf="statusTraking == 0" style="background-color: red;"> Traker spento </span>
+    </div>
+    <div class="col">
+        <span *ngIf="statusTraking == 1" style="background-color:green;"> Traker Acceso </span>
+    </div>
+  </div>
+
+  <div class="row m-3">
+    <div class="col">
+     latitudine: {{ currLat }}   - Longitudine: {{ currLng }}
+    </div>
+    <div class="col">
+        
+    </div>
+  </div>
+</div>
+
+
+

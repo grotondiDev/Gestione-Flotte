@@ -1,0 +1,61 @@
+<div class = "container-fluid">
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Lista Mezzi</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let mezzo of mezzi; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveMezzo(mezzo, i)"
+      >
+      {{ mezzo.sistema_operativo }} {{ mezzo.targa }} {{ mezzo.posizioni._id }}
+      <a routerLink="/tracker/{{ mezzo.targa }}">SALI A BORDO</a>
+      </li>
+      <li>
+        
+      </li>
+    </ul>
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMezzi()">
+         Rimuovi tutto
+    </button>
+    <button class="m-3 btn btn-sm btn-danger" routerLink="/mezzi/aggiungi">
+      Aggiungi Nuovo Mezzo
+    </button>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentMezzo">
+      <h4>Mezzo</h4>
+      <div>
+        <label><strong>Sistema Operativo:</strong></label> {{ currentMezzo.sistema_operativo }}
+      </div>
+      <div>
+        <label><strong>Targa:</strong></label>
+        {{ currentMezzo.targa }}
+      </div>
+      <div>
+        <label><strong>Scadenza Assicurazione:</strong></label>
+        {{ currentMezzo.scadenza_assicurazione }}
+      </div>
+      <div>
+        <label><strong>Scadenza Bollo:</strong></label>
+        {{ currentMezzo.scadenza_bollo }}
+      </div>
+
+      <a class="badge badge-warning" routerLink="/mezzi/{{ currentMezzo.id }}">
+       Modifica
+      </a>
+    </div>
+
+    <div *ngIf="!currentMezzo">
+      <br />
+      <p>Sleziona un Mezzo!</p>
+    </div>
+  </div>
+</div>
+</div>

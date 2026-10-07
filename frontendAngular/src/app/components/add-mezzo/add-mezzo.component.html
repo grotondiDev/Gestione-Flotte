@@ -1,0 +1,64 @@
+<div style="width: 400px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+
+      <div class="form-group">
+      
+        <label for="sistema_operativo">Sistema Operativo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="sistema_operativo"
+          required
+          [(ngModel)]="mezzo.sistema_operativo"
+          name="sistema_operativo"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <label for="targa">targa</label>
+        <input
+          class="form-control"
+          id="targa"
+          required
+          [(ngModel)]="mezzo.targa"
+          name="targa"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <label for="scadenza_assicurazione">scadenza assicurazione</label>
+        <input
+        type="date"
+          class="form-control"
+          id="scadenza_assicurazione"
+          required
+          [(ngModel)]="mezzo.scadenza_assicurazione"
+          name="scadenza_assicurazione"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <label for="scadenza_bollo">scadenza assicurazione</label>
+        <input
+        type="date"
+          class="form-control"
+          id="scadenza_bollo"
+          required
+          [(ngModel)]="mezzo.scadenza_bollo"
+          name="scadenza_bollo"
+          ngModel
+        />
+        
+      </div>
+      
+
+      <button (click)="saveMezzo()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Mezzo inserito con successo!</h4>
+      <button class="btn btn-success" (click)="newMezzo()">Aggiungi Nuovo</button>
+    </div>
+  </div>
+</div>

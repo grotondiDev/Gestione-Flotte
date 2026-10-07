@@ -1,0 +1,2 @@
+npm i --save-dev @types/leaflet-routing-machine
+npm i leaflet-routing-machine
