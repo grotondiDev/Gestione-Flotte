@@ -1,4 +1,4 @@
-# MonitFlotta
+# Gestione Flotte
 
 Applicativo di **monitoraggio e gestione flotte veicolari** realizzato per la tesi di laurea di **Giorgio Michele Rotondi** (Matricola **1232478**).
 
@@ -8,7 +8,7 @@ Il sistema consente di registrare i mezzi della flotta, tracciare in tempo reale
 
 ## Panoramica
 
-MonitFlotta è un’applicazione full-stack composta da:
+Gestione Flotte è un’applicazione full-stack composta da:
 
 | Componente | Tecnologia | Porta |
 |---|---|---|
@@ -198,7 +198,7 @@ L’applicazione sarà disponibile su **http://localhost:4200**.
 
 **Giorgio Michele Rotondi**  
 Matricola: **1232478**  
-Tesi di laurea — Applicativo MonitFlotta
+Tesi di laurea — Applicativo Gestione Flotte
 
 ---
 
